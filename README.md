@@ -38,8 +38,8 @@ create_ftp_user() {
     echo "$USERNAME:$PASSWORD" | sudo chpasswd
 
     # 创建必要的目录
-    sudo mkdir -p "/home/ftp_root/FTP_$USERNAME/Dir-ItchatMsg"
-    sudo mkdir -p "/home/ftp_root/FTP_$USERNAME/Dir-SendingOut"
+    sudo mkdir -p "/home/ftp_root/FTP_$USERNAME/UploadMsg_FromWeMole"
+    sudo mkdir -p "/home/ftp_root/FTP_$USERNAME/Download_ToSendingOut"
     sudo mkdir -p "/home/ftp_root/FTP_$USERNAME/tmp"
 
     # 设置所有权
@@ -47,8 +47,8 @@ create_ftp_user() {
 
     # 设置权限
     sudo chmod 755 "/home/ftp_root/FTP_$USERNAME"
-    sudo chmod 755 "/home/ftp_root/FTP_$USERNAME/Dir-ItchatMsg"
-    sudo chmod 755 "/home/ftp_root/FTP_$USERNAME/Dir-SendingOut"
+    sudo chmod 755 "/home/ftp_root/FTP_$USERNAME/UploadMsg_FromWeMole"
+    sudo chmod 755 "/home/ftp_root/FTP_$USERNAME/Download_ToSendingOut"
     sudo chmod 755 "/home/ftp_root/FTP_$USERNAME/tmp"
 
     echo "用户 $USERNAME 创建完成"
