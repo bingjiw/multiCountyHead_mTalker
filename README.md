@@ -173,6 +173,9 @@ tar -czf /backup/ftp_backup_$backup_date.tar.gz /home/ftp_root/
 
 
 
+
+
+
 # WhatsApp群接收消息保存到文件夹  
 GitHub仓库名：WhatsAppGroup_to_Folder
   
@@ -222,3 +225,32 @@ Vonage:
 1728908628_Picture_From:WhatsAppGroup@@GroupName@发送者的昵称.JPEG
 
 17289036538_Text_From:WhatsAppGroup@@GroupName@发送者的昵称.TXT
+
+
+
+
+
+
+# 清理现有mTalker（Python项目）中的大量无用代码（实际运行时根本不会用到），减少运行时的内存消耗。同时保持正常运行
+记录优化清理前的内存消耗，并对比优化后的内存消耗。
+
+
+# 功能增加：将mTalker从单县长（单微信号）改为多县长（多微信号）
+
+
+
+# 功能增加：使每个聊天室可以设置自己专用的系统提示词、诱导回答语
+
+
+
+# 功能增加：增加　Grok、Google Gemini作为回答的GPT引擎
+
+
+
+# 国产GPT合并到mTalker，改为用 weMole + mTalker
+
+
+
+# 各县长、各群 的负责人 可以自定：系统提示词、诱导回答语
+
+
