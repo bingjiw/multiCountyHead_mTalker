@@ -1,6 +1,4 @@
-# 多县长mTalker 文档
-
-
+# 多县长mTalker FTP设置
 
 ##服务器设置多用户 vsftpd 结构。以下是完整配置步骤：
 
@@ -172,3 +170,55 @@ tar -czf /backup/ftp_backup_$backup_date.tar.gz /home/ftp_root/
 - 包含所有需要的子目录
 - 权限设置合理
 - 易于管理和维护
+
+
+
+# WhatsApp群接收消息保存到文件夹  
+GitHub仓库名：WhatsAppGroup_to_Folder
+  
+## 需求实现：把某WhatsApp群的每一条消息（如是英语，则翻译为中文）接收后，按指定格式保存到某文件夹的一个文本文件中，如是图片（或表情图或附件文件）也存到文件。
+
+## WhatsApp接入方案：
+最佳推荐：WhatsApp Business API
+原因：
+- 接收消息完全免费
+- 最稳定可靠
+- 没有中间商增加的延迟
+- 长期使用最经济
+
+### 其他方案对比
+WhatsApp Business API:
+- 接收消息：免费
+- 仅企业认证等前期成本
+
+MessageBird:
+- 接收消息：约 $400/月
+- 无需认证费用
+
+Twilio:
+- 接收消息：约 $500/月
+- 无需认证费用
+
+Vonage:
+- 接收消息：约 $500/月
+- 无需认证费用
+
+
+## 技术细节
+编程语言不限，但运行服务器环境为：Debian11x64 1G内存
+内存较小，且还有其他App在运行。
+运行服务器上已安装有Python3.
+因此实现方案需考虑：占用内存不能超过200M，最好小于100M
+
+翻译使用Google的免费翻译服务API 或 OpenAI的LLM免费版（如gpt-4o-mini）或 其他质量较高的翻译方案
+
+文本与图片等 都保存到：Dir-SendingOut
+
+图片（或表情图或附件文件）的文件名中会标识 发送者的昵称
+
+文件名如：序号（如用UNIX-TIMESTAMP）-From:WhatsApp_GroupName-To:发送者的昵称.jpg
+序号用于标识消息的先后次序。如：
+
+1728908628_Picture_From:WhatsAppGroup@@GroupName@发送者的昵称.JPEG
+
+17289036538_Text_From:WhatsAppGroup@@GroupName@发送者的昵称.TXT
