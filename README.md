@@ -1,3 +1,15 @@
+# 介绍
+### 什么是mTalker？
+mTalker是一个从本地文件夹读取微信和WhatsApp的聊天消息，再调用AI（各家GPT）进行AI回复（参加群聊）的Python项目。
+
+### 如何获取微信和WhatsApp的聊天消息？
+由另一个软件weMole获取后存到文件夹
+
+### 什么是多县长（多县官）？
+本项目把微信或WhatsApp的本人帐号称为CountyHead，中文意为：县长（县官）。多县长即能同时处理多个微信和WhatsApp帐号的消息。
+
+
+
 # 多县长mTalker FTP设置
 
 ##服务器设置多用户 vsftpd 结构。以下是完整配置步骤：
